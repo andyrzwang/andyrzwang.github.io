@@ -8,7 +8,7 @@ var cannonAudio;
 var explosionAudio;
 var explosionGif;
 
-const fuGoSpeedY = 2; //constant speed of FuGo
+var fuGoSpeedY = 2; //constant speed of FuGo
 
 var lives = 5;
 var score = 0;
