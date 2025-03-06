@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni iure nam dolore <br>
+                ullam illo nulla molestias! Nemo corporis ex <br>
+                blanditiis exercitationem ad cum sint quia, beatae consectetur explicabo animi.
+            </p>
+            <p class="eraser">
+                <span class="text">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni iure nam dolore <br>
+                    ullam illo nulla molestias! Nemo corporis ex <br>
+                    blanditiis exercitationem ad cum sint quia, beatae consectetur explicabo animi.
+                </span>
+            </p>
+        </div>
+    </div>
+</body>
+ 
+<style>
+    body{
+        background: black;
+    }
+    p{margin: 0;}
+    .container{
+        font-size: 20px;
+        color: white;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans';
+    }
+    .box{
+        width: 500px;
+        height: 500px;
+        margin: 80px auto;
+        position: relative;
+        line-height: 2;
+    }
+    .eraser{
+        position: absolute;
+        inset: 0;
+    }
+ 
+    @property --p{
+        syntax: '<percentage>';
+        initial-value: 0%;
+        inherits: false;
+    }
+    .text{
+        --p: 30%;
+        color: transparent;
+        background: linear-gradient(to right, transparent var(--p), black calc(var(--p) + 5px));
+        animation: erase 5s forwards linear;
+    }
+ 
+    @keyframes erase {
+        0%{
+            --p: 0%;
+        }
+        100%{
+            --p: 100%;
+        }
+    }
+</style>
+</html>

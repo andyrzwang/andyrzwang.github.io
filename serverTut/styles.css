@@ -1,0 +1,75 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.progress {
+    position: fixed;
+    top: 50px; /* Positioned directly below the navbar */
+    left: 0;
+    right: 0;
+    height: 10px;
+    background-color: #4336f4;
+    transform-origin: 0 50%;
+    animation: grow-progress 3s linear;
+    animation-timeline: scroll();
+    z-index: 999;
+}
+@keyframes grow-progress {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    font: optional;
+}
+
+
+.navbar {
+    background-color: #333;
+    padding: 15px;
+    text-align: left;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 10px;
+}
+
+
+.container {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 10px;
+}
+h1 {
+    text-align: center;
+}
+.card {
+    display: flex;
+    background: white;
+    padding: 20px;
+    margin: 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+.card-content {
+    flex: 1;
+}
+.card img {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    margin-left: 20px;
+    border-radius: 5px;
+}
