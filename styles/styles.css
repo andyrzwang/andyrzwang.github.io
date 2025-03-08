@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.menu {
+    display: flex;
+    gap: 15px;
+}
+
+.nav-btn {
+    background: #e0e0e0;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+h1 {
+    align-items: center;
+    font-size: 36px;
+}
+.nav-btn:hover {
+    background: #d0d0d0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+    flex-direction: column;
+    font-size: 36px;
+    color: #333;
+    line-height: 1.5;
+    font-size: 20px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans';
+}
+
+.box{
+    width: 500px;
+    height: 500px;
+    margin: 80px auto;
+    position: relative;
+    line-height: 2;
+}
+.eraser{
+    position: absolute;
+    inset: 0;
+}
+
+@property --p{
+    syntax: '<percentage>';
+    initial-value: 0%;
+    inherits: false;
+}
+.text{
+    --p: 30%;
+    color: transparent;
+    background: linear-gradient(to right, transparent var(--p), #f9f9f9 calc(var(--p) + 10px));
+    animation: erase 1s forwards linear;
+}
+
+@keyframes erase {
+    0%{
+        --p: 0%;
+    }
+    100%{
+        --p: 100%;
+    }
+}
+
+
+
+
+

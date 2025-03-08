@@ -1,0 +1,226 @@
+
+    <h1>Andy</h1>
+    <ul>
+      <li><a href="https://www.linkedin.com/in/andyrzwang/">My linkedin</a></li>
+      <li><a href="https://www.github.com/andyrzwang">My github</a></li>
+    </ul>
+    <h2>Ongoing projects in the website</h2>
+    <ul>
+      <li>How to build your own Oracle server (for free).</li>
+      <!-- <li>How to make the server your own backend</li> -->
+    </ul>
+    <!-- <p>This is paragraph. Andy</p> -->
+    <!-- <button style="padding:10px"><a href="cannonGame/cannonGame.html">a cannon game. Andy</a></button> -->
+
+
+
+
+
+
+
+
+
+
+
+https://github.com/wmc425454438/Michael/blob/master/apple/css/apple.css
+<div>
+    <div class="apple">
+        <div class="colors-headline-part">七彩来袭，</div>
+        <span>这里@</span>
+        <span class="type-colors" aria-hidden="true" data-component-list="HueSlide" data-start="a0b - 80vh" data-duration="0.3" data-stagger="[0.4, 0.7]" data-ease-function="easeOutQuad">
+            <span class="type-color type-color-green ">绿色</span>
+            <span class="type-color type-color-yellow ">黄色</span>
+            <span class="type-color type-color-orange ">橙色</span>
+            <span class="type-color type-color-pink ">粉色</span>
+            <span class="type-color type-color-purple ">紫色</span>
+            <span class="type-color type-color-blue ">蓝色</span>
+            <span class="type-color type-color-silver ">银色</span>
+            <span class="type-color type-color-hue ">颜色</span>控。
+        </span>
+    </div>
+    <script>
+      let nodes = document.getElementsByClassName('type-color');
+        console.log(nodes);
+        let len = nodes.length;
+        let timeout = function(i) {
+            setTimeout(() => {
+                nodes[i].className += 'data-hue-anim ';
+            }, i * 800);
+        }
+        for(let i = 0; i < len - 1; i++) {
+            console.log(nodes[i]);
+            timeout(i);
+            // setTimeout(() => {
+            //     nodes[i].className += 'data-hue-anim ';
+            // }, i * 800);
+        }
+    
+        
+    
+        let lastnode = document.getElementsByClassName('type-color-hue')[0];
+        setTimeout(() => {
+            lastnode.className += 'data-shift-anim ';
+        }, 5600);
+        // data-shift-anim
+    </script>
+  </div>
+/* -------------------------------- */
+/*           Comment Divider        */
+/* -------------------------------- */
+:root {
+    --enhanced-xp-css-token: 'enhance-xp';
+    --pink: #b72c31;
+    --orange: #e36942;
+    --yellow: #d48207;
+    --green: #10505b;
+    --blue: #25476d;
+    --purple: #353a71;
+    --silver: #c7c8ca;
+    --pink-light: #eeb8b0;
+    --orange-light: #e9aa95;
+    --yellow-light: #eaca96;
+    --green-light: #a4beb2;
+    --blue-light: #a8bed2;
+    --purple-light: #abacca;
+    --pink-text: #b62c31;
+    --orange-text: #ef5602;
+    --yellow-text: #c98000;
+    --green-text: #006e82;
+    --blue-text: #26476d;
+    --purple-text: #4f5381;
+    --silver-text: #a1a1a6;
+    --background: #fafafa;
+    --env-mask: #dcf3ea;
+    --specs-env-background: #f6f6ee;
+    --enhanced-media-query: "(min-height: 500px) and (max-height: 1500px)";
+    --r-localnav-height: 50px;
+}
+
+.apple {
+    font-family: "SF Pro SC","SF Pro Display","SF Pro Icons","PingFang SC","Helvetica Neue","Helvetica","Arial",sans-serif;
+    font-size: 60px;
+    line-height: 1.05556;
+    font-weight: 600;
+}
+
+.type-colors {
+    display: inline-flex;
+    position: relative;
+    min-width: 350px;
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+
+.type-colors .type-color-hue {
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* text-fill-color: transparent; */
+    background-image: linear-gradient(120deg, var(--silver-text) 0%, var(--green-text) 40%, var(--yellow-text) 65%, var(--orange-text) 73%, var(--pink-text) 82%, var(--purple-text) 93%, var(--purple-text) 100%);
+    background-position: 100% 50%;
+}
+
+.type-colors .type-color:first-child {
+    position: relative;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+.type-colors .type-color:not(:first-child) {
+    left: 0;
+    position: absolute;
+    opacity: 0;
+    transform: translateY(100%);
+}
+
+/* .type-colors .type-color-hue {
+    position: relative;
+    opacity: 0;
+    transform: translateY(0);
+} */
+
+.type-colors .type-color.data-shift-anim {
+    transform: translateY(0);
+    opacity: 1;
+    animation: 0.3s linear colorshiftchange , 2s ease-out 0.1s backposition ;
+}
+
+.type-colors .type-color-green {
+    color: var(--green-text);
+}
+
+.type-colors .type-color-yellow {
+    color: var(--yellow-text);
+}
+
+.type-colors .type-color-orange {
+    color: var(--orange-text);
+}
+
+.type-colors .type-color-pink {
+    color: var(--pink-text);
+}
+
+.type-colors .type-color-purple {
+    color: var(--purple-text);
+}
+
+.type-colors .type-color-blue {
+    color: var(--blue-text);
+}
+
+.type-colors .type-color-silver {
+    color: var(--silver-text);
+}
+
+.type-colors .type-color-hue {
+    color: var(--hue-text);
+}
+
+.js-will-change {
+    will-change: transform, opacity, background-position;
+}
+
+.data-hue-anim {
+    animation: colorchange 1s linear;
+}
+
+@keyframes colorchange {
+    0% {
+        transform: matrix(1, 0, 0, 1, 0, 91); opacity: 0;
+    }
+
+    30% {
+        transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;
+    }
+
+    70% {
+        transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;
+    }
+
+    100% {
+        transform: matrix(1, 0, 0, 1, 0, -91); opacity: 0;
+    }
+}
+
+@keyframes colorshiftchange {
+    0% {
+        transform: matrix(1, 0, 0, 1, 0, 91); opacity: 0;
+    }
+
+    100% {
+        transform: matrix(1, 0, 0, 1, 0, 0); opacity: 1;
+    }
+}
+
+@keyframes backposition {
+    0% {
+        background-position: 0 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+    
+}
