@@ -63,7 +63,10 @@
     fetch("http://64.181.243.6:8050/mazegame/viewTopScores", {
         method: "POST", // Use POST to send body
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "Accept":"*/*",
+            "Accept-Ecoding":"gzip, deflate, br"
+
         },
         body: JSON.stringify(requestBody)
     })
