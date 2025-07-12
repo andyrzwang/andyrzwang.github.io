@@ -3,68 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>test New Web</title>
 </head>
 <body>
     <div class="container">
-        <div class="box">
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni iure nam dolore <br>
-                ullam illo nulla molestias! Nemo corporis ex <br>
-                blanditiis exercitationem ad cum sint quia, beatae consectetur explicabo animi.
-            </p>
-            <p class="eraser">
-                <span class="text">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum magni iure nam dolore <br>
-                    ullam illo nulla molestias! Nemo corporis ex <br>
-                    blanditiis exercitationem ad cum sint quia, beatae consectetur explicabo animi.
-                </span>
-            </p>
+    <div class="card">
+      <div class="title-bar">
+        <div class="circles">
+          <span class="red"></span>
+          <span class="yellow"></span>
+          <span class="green"></span>
         </div>
+        <span class="filename">Business Card.json</span>
+        <div class="placeholder"></div> <!-- to balance the layout -->
+      </div>
+      <pre class="json-content">
+<span class="bracket">{</span>
+  <span class="key">"name"</span>: <span class="value">"Andy Wang"</span>,
+  <span class="key">"about me"</span>: <span class="value">"SFU Computer Science Student"</span>,
+  <span class="key">"linkedin"</span>: <span class="value"><a href="https://www.linkedin.com/in/andyrzwang/" target="_blank">"linkedin.com/in/andyrzwang/"</a></span>,
+  <span class="key">"github"</span>: <span class="value"><a href="https://github.com/andyrzwang" target="_blank">"github.com/andyrzwang"</a></span>,
+<span class="bracket">}</span>
+      </pre>
+      
     </div>
+    <!--stuff-->
+    <p  style="margin-top: 200px"> ** Currently Under Construction **</p>
+    <!--stuff-->
+    </div>
+  
+  
+
+  
 </body>
  
 <style>
-    body{
-        background: black;
-    }
-    p{margin: 0;}
-    .container{
-        font-size: 20px;
-        color: white;
-        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans';
-    }
-    .box{
-        width: 500px;
-        height: 500px;
-        margin: 80px auto;
-        position: relative;
-        line-height: 2;
-    }
-    .eraser{
-        position: absolute;
-        inset: 0;
-    }
- 
-    @property --p{
-        syntax: '<percentage>';
-        initial-value: 0%;
-        inherits: false;
-    }
-    .text{
-        --p: 30%;
-        color: transparent;
-        background: linear-gradient(to right, transparent var(--p), black calc(var(--p) + 10px));
-        animation: erase 5s forwards linear;
-    }
- 
-    @keyframes erase {
-        0%{
-            --p: 0%;
-        }
-        100%{
-            --p: 100%;
-        }
-    }
+body {
+  margin: 0;
+  background: linear-gradient(150deg, #f4efff, #7380a9, #373696);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+canvas {
+  border: 1px solid #ccc;
+  background-color: #ffffff;
+}
+
+.card {
+  background-color: #1e1e1e;
+  border-radius: 8px;
+  width: 680px; /* Wider card */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+  color: #ffffff;
+}
+
+.title-bar {
+  background-color: #2c2c2c;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.circles {
+  display: flex;
+}
+
+.circles span {
+  height: 12px;
+  width: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 8px;
+}
+
+.red { background-color: #ff5f56; }
+.yellow { background-color: #ffbd2e; }
+.green { background-color: #27c93f; }
+
+.filename {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.placeholder {
+  width: 36px; /* same width as circles for balance */
+}
+
+.json-content {
+  padding: 1rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #9cdcfe;
+  background-color: #1e1e1e;
+  white-space: pre-wrap;
+}
+
+.key {
+  color: #ce9178;
+}
+
+.value {
+  color: #9cdcfe;
+}
+
+.bracket {
+  color: #d4d4d4;
+}
+
+.links {
+  padding: 1rem;
+  background-color: #2a2a2a;
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  border-top: 1px solid #444;
+}
+
+.value a {
+  color: #4fc3f7;
+  text-decoration: none;
+  /* font-weight: bold; */
+  
+}
+
+.links a:hover {
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
 </style>
 </html>
