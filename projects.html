@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Andy's Website</title>
+    <title>Andy's Projects</title>
 </head>
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-91YXCVMK7K"></script>
@@ -14,31 +14,49 @@
 </script>
 <body>
     <div class="container">
-    <div class="card">
-      <div class="title-bar">
-        <div class="circles">
-          <span class="red"></span>
-          <span class="yellow"></span>
-          <span class="green"></span>
+
+      <div class="card">
+        <div class="title-bar">
+          <div class="circles">
+            <span class="red"></span>
+            <span class="yellow"></span>
+            <span class="green"></span>
+          </div>
+          <span class="filename">Current Projects.json</span>
+          <div class="placeholder"></div>
         </div>
-        <span class="filename">My Business Card.json</span>
-        <div class="placeholder"></div> <!-- to balance the layout -->
-      </div>
-      <pre class="json-content">
+        <pre class="json-content">
 <span class="bracket">{</span>
-  <span class="key">"name"</span>: <span class="value">"Andy Wang"</span>,
-  <span class="key">"about me"</span>: <span class="value">"SFU Computer Science Student"</span>,
-  <span class="key">"linkedin"</span>: <span class="value"><a href="https://www.linkedin.com/in/andyrzwang/" target="_blank">"linkedin.com/in/andyrzwang/"</a></span>,
-  <span class="key">"github"</span>: <span class="value"><a href="https://github.com/andyrzwang" target="_blank">"github.com/andyrzwang"</a></span>,
-  <!-- <span class="key">"current projects"</span>: <span class="value"><a href="projects.html">"projects"</a></span>, -->
+  <span class="key">"projects"</span>: <span class="bracket">[</span>
+    <span class="bracket">{</span>
+      <span class="key">"name"</span>: <span class="value">"Project Filler"</span>,
+      <span class="key">"note"</span>: <span class="value">"filler 1"</span>,
+      <span class="key">"points"</span>: <span class="bracket">[</span>
+        <span class="value">"Bullet point 1"</span>,
+        <span class="value">"Bullet point 2"</span>,
+        <span class="value">"Bullet point 3"</span>
+      <span class="bracket">]</span>
+    <span class="bracket">}</span>,
+    <span class="bracket">{</span>
+      <span class="key">"name"</span>: <span class="value">"Project Filler"</span>,
+      <span class="key">"note"</span>: <span class="value">"filler 2"</span>,
+      <span class="key">"points"</span>: <span class="bracket">[</span>
+        <span class="value">"Bullet point 1"</span>,
+        <span class="value">"Bullet point 2"</span>
+      <span class="bracket">]</span>
+    <span class="bracket">}</span>
+  <span class="bracket">]</span>
 <span class="bracket">}</span>
-      </pre>
-      
+        </pre>
+      </div>
+
+      <div class="back-link">
+        <a href="index.html">← back to home</a>
+      </div>
+
     </div>
-    </div>
-  
 </body>
- 
+
 <style>
 body {
   margin: 0;
@@ -50,7 +68,6 @@ body {
   padding-top: 40px;
 }
 
-
 .container {
   display: flex;
   flex-direction: column;
@@ -58,15 +75,10 @@ body {
   gap: 20px;
 }
 
-canvas {
-  border: 1px solid #ccc;
-  background-color: #ffffff;
-}
-
 .card {
   background-color: #1e1e1e;
   border-radius: 8px;
-  width: 680px; /* Wider card */
+  width: 680px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   overflow: hidden;
   color: #ffffff;
@@ -106,7 +118,7 @@ canvas {
 }
 
 .placeholder {
-  width: 36px; /* same width as circles for balance */
+  width: 36px;
 }
 
 .json-content {
@@ -130,23 +142,18 @@ canvas {
   color: #d4d4d4;
 }
 
-.links {
-  padding: 1rem;
-  background-color: #2a2a2a;
-  display: flex;
-  gap: 1rem;
-  justify-content: flex-start;
-  border-top: 1px solid #444;
+.back-link {
+  align-self: flex-start;
+  padding-bottom: 40px;
 }
 
-.value a {
+.back-link a {
   color: #4fc3f7;
   text-decoration: none;
-  /* font-weight: bold; */
-  
+  font-size: 0.9rem;
 }
 
-.links a:hover {
+.back-link a:hover {
   text-decoration: underline;
 }
 </style>
